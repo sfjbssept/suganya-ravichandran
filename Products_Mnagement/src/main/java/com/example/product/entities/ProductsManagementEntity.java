@@ -1,9 +1,11 @@
 package com.example.product.entities;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity
 public class ProductsManagementEntity {
 	
 	@Id
@@ -30,6 +32,18 @@ public class ProductsManagementEntity {
 	}
 	public void setProductBrand(String productBrand) {
 		this.productBrand = productBrand;
+	}
+	public ProductsManagementEntity() {
+		super();
+	}
+	public ProductsManagementEntity(Integer id, String productName, String productBrand, String productCategory,
+			Integer productPrice) {
+		super();
+		this.id = id;
+		this.productName = productName;
+		this.productBrand = productBrand;
+		this.productCategory = productCategory;
+		this.productPrice = productPrice;
 	}
 	public String getProductCategory() {
 		return productCategory;
